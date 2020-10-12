@@ -26,23 +26,6 @@ nav {
   padding: 1rem;
 }
 
-.menu-container {
-  border-bottom: 5px dotted yellow;
-  height: 40px;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  /* text-align: right; */
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: 0 1rem 0 1rem;
-}
-
 .logo-container {
   position: relative;
   display: flex;
@@ -95,4 +78,78 @@ main {
   position: absolute;
   top: 400px;
   z-index: -1;
+}
+
+.hamburger {
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
+
+.showNav {
+  background: black;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  transform: translateY(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav button .open {
+  color: white;
+}
+
+nav button:focus {
+  outline: white;
+  border: none;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  content: "\e5d2";
+}
+
+@media only screen and (min-device-width: 1224px) {
+
+  button.hamburger {
+    display: none;
+  }
+
+  .menu-container {
+    border-bottom: 5px dotted yellow;
+    height: 40px;
+    transform: translateY(0);
+    position: relative;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    /* text-align: right; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    padding: 0 1rem 0 1rem;
+  }
+
 }
