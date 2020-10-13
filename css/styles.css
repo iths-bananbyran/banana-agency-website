@@ -251,7 +251,7 @@ nav button:focus {
   background-color: var(--white);
 }
 
-.statement-container {
+.statement-content {
   max-width: 80%;
   line-height: 1.5em;
   padding: 2rem;
@@ -261,7 +261,7 @@ nav button:focus {
   max-width: 800px; 
 }
 
-.statement h2 {
+.statement h2, .profiles h2 {
   font-size: 2.2em;
   line-height: 1em;
   color: var(--bg-blue); 
@@ -269,3 +269,57 @@ nav button:focus {
   margin: 0 0 1rem 0;
 }
 
+.profiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.5em;
+  background-color: var(--bg-blue);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 3px 5px 10px 0 rgba(0,0,0,.2);
+  transition: box-shadow .2s ease;
+  background-color: var(--yellow);
+}
+
+.profiles-content {
+  padding: 2rem;
+}
+
+.profiles h2 {
+  color: var(--white)
+}
+
+.profile-card:hover, .profile-card:focus         {
+  box-shadow: 10px 30px 50px 0 rgba(0,0,0,.5),
+  3px 5px 10px 0 rgba(0,0,0,.2)
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 280px;
+  overflow: hidden;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 0;
+  height: 300px;
+}
+
+.employee-info {
+  padding: 1rem;
+}
