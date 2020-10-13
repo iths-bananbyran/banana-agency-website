@@ -34,6 +34,19 @@ nav {
   padding: 1rem;
 }
 
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--black);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .logo-container {
   position: relative;
   display: flex;
@@ -129,8 +142,21 @@ ul {
   justify-content: center;
 }
 
+.showNav a {
+  color: var(--yellow);
+}
+
+.showNav li {
+  padding-bottom: 1rem;
+
+}
+
+.showNav a:visited {
+  color: var(--yellow);
+}
+
 nav button .open {
-  color: var(--white);
+  color: var(--yellow);
 }
 
 nav button:focus {

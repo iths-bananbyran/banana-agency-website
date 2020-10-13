@@ -18,9 +18,10 @@ const toggleHamburger = () =>{
             
         }
     
-        // if (window.matchMedia('(min-device-width: 1224px)')){
-        //     navbar.classList.remove('showNav')
-        // }
+        if (window.matchMedia('(min-device-width: 1224px)').matches){
+            navbar.classList.remove('showNav')
+            icon.classList.remove('open')
+        }
     
 }
 
