@@ -144,7 +144,6 @@ nav button:focus {
 }
 
 .services {
-  margin: 20px 0;
   padding: 20px 0;
   background-color: yellow;
   display: flex;
