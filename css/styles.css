@@ -243,3 +243,6 @@ nav button:focus {
   margin: 0 0 1rem 0;
 }
 
+footer {
+  background-color: black;
+}
