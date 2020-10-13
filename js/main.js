@@ -5,20 +5,28 @@ const menuLinks = document.querySelectorAll('.menu-link');
 
 const toggleHamburger = () =>{
 
-    navbar.classList.toggle('showNav');
-    icon.classList.toggle('open');
-
-    switch (true) {
-        case icon.classList.contains('open'):
-            icon.innerHTML = 'highlight_off';
-            break;
-        default:
-            icon.innerHTML = 'menu';
-        
-    }
+    
+        navbar.classList.toggle('showNav');
+        icon.classList.toggle('open');
+    
+        switch (true) {
+            case icon.classList.contains('open'):
+                icon.innerHTML = 'highlight_off';
+                break;
+            default:
+                icon.innerHTML = 'menu';
+            
+        }
+    
+        if (window.matchMedia('(min-device-width: 1224px)').matches){
+            navbar.classList.remove('showNav')
+            icon.classList.remove('open')
+        }
+    
 }
 
-hamburger.addEventListener('click', toggleHamburger);
+    hamburger.addEventListener('click', toggleHamburger);
+    
+    menuLinks.forEach(link => link.addEventListener('click', toggleHamburger));
 
-menuLinks.forEach(link => link.addEventListener('click', toggleHamburger));
 
