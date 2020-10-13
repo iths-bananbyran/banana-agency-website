@@ -127,6 +127,37 @@ nav button:focus {
   content: "\e5d2";
 }
 
+.services {
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;   
+  border-bottom: 5px dotted black;
+
+}
+
+.services h2 {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.services-content h3 {
+  padding: 20px 0;
+}
+
 @media only screen and (min-device-width: 1224px) {
 
   button.hamburger {
@@ -150,6 +181,21 @@ nav button:focus {
   
   li {
     padding: 0 1rem 0 1rem;
+  }
+
+  .services {
+    flex-direction: row;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .services-content {
+    flex-direction: column;
+    width: 450px;
+    border: 0;
   }
 
 }
