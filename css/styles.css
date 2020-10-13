@@ -245,4 +245,11 @@ nav button:focus {
 
 footer {
     background-color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
