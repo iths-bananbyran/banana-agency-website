@@ -1,6 +1,7 @@
 const navbar = document.querySelector('.menu-container');
 const hamburger = document.querySelector('#menu-btn');
 const icon = document.querySelector('i');
+const menuLinks = document.querySelectorAll('.menu-link');
 
 const toggleHamburger = () =>{
 
@@ -18,4 +19,6 @@ const toggleHamburger = () =>{
 }
 
 hamburger.addEventListener('click', toggleHamburger);
+
+menuLinks.forEach(link => link.addEventListener('click', toggleHamburger));
 
