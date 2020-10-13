@@ -92,6 +92,10 @@ main {
   background-color: transparent;
 }
 
+ul {
+  list-style: none;
+}
+
 .menu-container {
   position: absolute;
   top: 0;
