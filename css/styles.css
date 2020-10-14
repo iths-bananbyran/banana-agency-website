@@ -4,7 +4,7 @@
 }
 
 :root {
-    --bg-blue: rgb(141, 202, 202);
+    --bg-blue: rgb(94, 202, 202);
     --yellow: rgb(255, 240, 0);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
@@ -76,10 +76,12 @@ main {
     justify-content: center;
     align-items: center;
     background-image: url("./../img/bananagif@1920x1080.gif");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+
 }
+
 
 .hero {
     position: relative;
@@ -88,7 +90,8 @@ main {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 500px;
+    height: 600px;
+    
 }
 
 .hero > h1 {
@@ -171,36 +174,43 @@ nav button:focus {
 
 .services {
     padding: 20px 0;
-    background-color: yellow;
+    background-color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
+    width: 100vw;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.services-container {
+    max-width: 80%;
+    padding: 2rem;
 }
 
 .services-content {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 100vw;   
-    border-bottom: 5px dotted black;
+    max-width: 420px;  
+    border-bottom: 5px dotted var(--black);
     
 }
 
 .services h2 {
     width: 100%;
-    text-align: center;
-    padding: 30px;
+    font-size: 2.2em;
+    text-align: left;
+    padding: 0 0 0 0;
+    margin-left: 1rem;
 }
 
 .services-content h3 {
-    padding: 20px 0;
+    padding: 0 0 1rem 0;
 }
 
-@media only screen and (min-device-width: 1224px) {
-    
+@media only screen and (min-device-width: 900px) {
+
     button.hamburger {
         display: none;
     }
@@ -235,7 +245,6 @@ nav button:focus {
     
     .services-content {
         flex-direction: column;
-        width: 450px;
         border: 0;
     }
     
@@ -258,10 +267,10 @@ nav button:focus {
     padding: 2rem;
 }
 
-.statement-content {
+.statement-content, content {
   max-width: 80%;
   line-height: 1.5em;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .statement p {
@@ -312,17 +321,25 @@ footer p {
 
 .profiles {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   line-height: 1.5em;
   background-color: var(--bg-blue);
+  padding: 1rem;
+}
+
+.profiles-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .profile-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 250px;
   border-radius: 1rem;
@@ -330,14 +347,12 @@ footer p {
   box-shadow: 3px 5px 10px 0 rgba(0,0,0,.2);
   transition: box-shadow .2s ease;
   background-color: var(--yellow);
-}
-
-.profiles-content {
-  padding: 2rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 .profiles h2 {
-  color: var(--white)
+    margin-top: 1rem;
+  color: var(--white);
 }
 
 .profile-card:hover, .profile-card:focus         {
@@ -363,4 +378,21 @@ footer p {
 
 .employee-info {
   padding: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+
+    main {
+        background-position-y: 120px;
+    }
+    .hero {
+        height: 300px;
+    }
+    .hero > h1 {
+        font-size: 3em;
+        color: var(--white);
+        width: 75%;
+        text-align: center;
+        text-shadow: 2px 2px 2px var(--black);
+    }
 }
